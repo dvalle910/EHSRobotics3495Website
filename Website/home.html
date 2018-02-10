@@ -105,43 +105,78 @@ img {vertical-align: middle;}
   .prev, .next,.text {font-size: 11px}
 }
 
-.button_fancy {
-   border-radius: 4px;
-   background-color: #32CD32;
-   border: none;
-   color: #FFFFFF;
-   text-align: center;
-   font-size: 10px;
-   padding: 10px;
-   transition: all 0.5s;
-   cursor: pointer;
-   margin: 5px;
- }
- 
- .button_fancy span {
-   cursor: pointer;
-   display: inline-block;
-   position: relative;
-   transition: 0.5s;
- }
- 
- .button_fancy span:after {
-   content: '»';
-   position: absolute;
-   opacity: 0;
-   top: 0;
-   right: -2px;
-   transition: 0.5s;
- }
- 
- .button_fancy:hover span {
-   padding-right: 10px;
- }
- 
- .button_fancy:hover span:after {
-   opacity: 1;
-   right: 0;
- }
+
+	<!--This makes the selected object move to the left-->
+	.turn_around{
+		float:left;
+	}
+	<!--This makes the selected object move to the right-->
+	.turn_back_around{
+		float:right;
+	}
+	<!--This changes the background-color of any and all items with this tag-->
+	.black_background_color{
+		background:#000000;
+	}
+	<!--This changes the background-color of any and all items with this tag-->
+	.gray_background_color{
+		background:#828891;
+	}
+	
+	.text_color_white{
+		color:white;
+	}
+	
+	.top_cushion{
+		padding-top: 10px;
+	}
+	
+	.big_bottom_cushion{
+		padding-bottom:100px;
+	}
+	
+	.button {
+	   border: none;
+	   text-align: center;
+	   font-size: 10px;
+	   padding: 10px;
+	   transition: all 0.5s;
+	   cursor: pointer;
+	   margin: 5px;
+	}
+	 
+	.button span {
+	   cursor: pointer;
+	   display: inline-block;
+	   position: relative;
+	   transition: 0.5s;
+	}
+	 
+	.button span:after {
+	   content: '»';
+	   position: absolute;
+	   opacity: 0;
+	   top: 0;
+	   right: -2px;
+	   transition: 0.5s;
+	}
+	 
+	.button:hover span {
+	   padding-right: 10px;
+	}
+	 
+	.button:hover span:after {
+	   opacity: 1;
+	   right: 0;
+	}
+	
+	.round_button {
+		border-radius: 24px;
+	}
+	
+	.button_gray {
+		color:#828282;
+	}
 </style>
   
   <title>Home</title>
@@ -158,13 +193,13 @@ img {vertical-align: middle;}
     </div>
 
     <div class="navbar" align="center">
-      <button class="button button_fancy"><a href="home.html">Home</a></button>
-      <button class="button button_fancy"><a href="about.html">About Us</a></button>
-      <button class="button button_fancy"><a href="competitions.html">Competitions</a></button>
-      <button class="button button_fancy"><a href="media.html">Media</a></button>
-      <button class="button button_fancy"><a href="blog.html">Blog</a></button>
-      <button class="button button_fancy"><a href="contacts.html">Contact Us</a></button>
-      <button class="button button_fancy"><a href="sponsors.html">Sponsors</a></button>
+      <button class="button round_button button_gray"><a href="home.html">Home</a></button>
+      <button class="button round_button button_gray"><a href="about.html">About Us</a></button>
+      <button class="button round_button button_gray"><a href="competitions.html">Competitions</a></button>
+      <button class="button round_button button_gray"><a href="media.html">Media</a></button>
+      <button class="button round_button button_gray"><a href="blog.html">Blog</a></button>
+      <button class="button round_button button_gray"><a href="contacts.html">Contact Us</a></button>
+      <button class="button round_button button_gray"><a href="sponsors.html">Sponsors</a></button>
     </div>
 
     <!--Slideshow-Thingy-->
