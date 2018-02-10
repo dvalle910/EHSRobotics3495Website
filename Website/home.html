@@ -104,6 +104,45 @@ img {vertical-align: middle;}
 @media only screen and (max-width: 300px) {
   .prev, .next,.text {font-size: 11px}
 }
+
+.button {
+   border-radius: 4px;
+   background-color: #32CD32;
+   border: none;
+   color: #FFFFFF;
+   text-align: center;
+   font-size: 10px;
+   padding: 10px;
+   width: 75px;
+   transition: all 0.5s;
+   cursor: pointer;
+   margin: 5px;
+ }
+ 
+ .button span {
+   cursor: pointer;
+   display: inline-block;
+   position: relative;
+   transition: 0.5s;
+ }
+ 
+ .button span:after {
+   content: '»';
+   position: absolute;
+   opacity: 0;
+   top: 0;
+   right: -2px;
+   transition: 0.5s;
+ }
+ 
+ .button:hover span {
+   padding-right: 10px;
+ }
+ 
+ .button:hover span:after {
+   opacity: 1;
+   right: 0;
+ }
 </style>
   
   <title>Home</title>
@@ -288,14 +327,26 @@ img {vertical-align: middle;}
     <div>
       <h6>FIND US</h6>
       <h5>
-        <a target="_blank" href="https://www.facebook.com/Edison3495/"><img class="bottom-mq" src="C:\Users\kacey\Desktop\Website\home-pic\fb.png" alt="fb"></a>
-        <a target="_blank" href="https://twitter.com/mindcraft3495?lang=en"><img class="bottom-mq" src="C:\Users\kacey\Desktop\Website\home-pic\twt.png" alt="twit"></a>
-        <a target="_blank" href="https://www.instagram.com/team3495/"><img class="bottom-mq" src="C:\Users\kacey\Desktop\Website\home-pic\inst.png" alt="insta"></a>
-        <a target="_blank" href="https://www.gofundme.com/edison3495"><img class="bottom-mq" src="C:\Users\kacey\Desktop\Website\home-pic\gfm.png" alt="gfm"></a>
-        <a target="_blank" href="https://frc-events.firstinspires.org/2018/team/3495"><img class="bottom-mq" src="C:\Users\kacey\Desktop\Website\home-pic\frc.png" alt="frc"></a>
+        <a target="_blank" href="https://www.facebook.com/Edison3495/"><img class="bottom-mq" src="home-pic\fb.png" alt="fb"></a>
+        <a target="_blank" href="https://twitter.com/mindcraft3495?lang=en"><img class="bottom-mq" src="twt.png" alt="twit"></a>
+        <a target="_blank" href="https://www.instagram.com/team3495/"><img class="bottom-mq" src="inst.png" alt="insta"></a>
+        <a target="_blank" href="https://www.gofundme.com/edison3495"><img class="bottom-mq" src="gfm.png" alt="gfm"></a>
+        <a target="_blank" href="https://frc-events.firstinspires.org/2018/team/3495"><img class="frc.png" alt="frc"></a>
       </h5>
     </div>
   </div>
+  <nav class="navbar navbar-inverse navbar-fixed-bottom">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#end">FIND US HERE:</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <a target="_blank" href="https://www.facebook.com/Edison3495/"><img class="bottom-mq" src="home-pic\fb.png" alt="fb"></a>
+      <a target="_blank" href="https://twitter.com/mindcraft3495?lang=en"><img class="bottom-mq" src="twt.png" alt="twit"></a>
+      <a target="_blank" href="https://www.instagram.com/team3495/"><img class="bottom-mq" src="inst.png" alt="insta"></a>
+      <a target="_blank" href="https://www.gofundme.com/edison3495"><img class="bottom-mq" src="gfm.png" alt="gfm"></a>
+      <a target="_blank" href="https://frc-events.firstinspires.org/2018/team/3495"><img class="frc.png" alt="frc"></a>
+    </ul>
+  </nav>
   
   <script>
   var slideIndex = 1;
