@@ -35,3 +35,19 @@ Your Pages site will use the layout and styles from the Jekyll theme you have se
 ### Support or Contact
 
 Having trouble with Pages? Check out our [documentation](https://help.github.com/categories/github-pages-basics/) or [contact support](https://github.com/contact) and we’ll help you sort it out.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+### Welcome to Team 3495 Mindcraft's Homepage! Find our Homepage [here](https://dvalle910.github.io/EHSRobotics3495Website/Website/home.html)!
