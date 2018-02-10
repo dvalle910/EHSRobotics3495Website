@@ -1,417 +1,437 @@
 <!DOCTYPE html>
 <html lang="en">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-
-  
-<head>
-
-<meta name="viewport" content="width=device-width, initial-scale=1">
-
-<style>
-  * {box-sizing: border-box}
-body {font-family: Verdana, sans-serif; margin:0}
-.mySlides {display: none}
-img {vertical-align: middle;}
-
-/* Slideshow container */
-.slideshow-container {
-  max-width: 1000px;
-  position: relative;
-  margin: auto;
-}
-
-/* Next & previous buttons */
-.prev, .next {
-  cursor: pointer;
-  position: absolute;
-  top: 50%;
-  width: auto;
-  padding: 16px;
-  margin-top: -22px;
-  color: white;
-  font-weight: bold;
-  font-size: 18px;
-  transition: 0.6s ease;
-  border-radius: 0 3px 3px 0;
-}
-
-/* Position the "next button" to the right */
-.next {
-  right: 0;
-  border-radius: 3px 0 0 3px;
-}
-
-/* On hover, add a black background color with a little bit see-through */
-.prev:hover, .next:hover {
-  background-color: rgba(0,0,0,0.8);
-}
-
-/* Caption text */
-.text {
-  color: #f2f2f2;
-  font-size: 15px;
-  padding: 8px 12px;
-  position: absolute;
-  bottom: 8px;
-  width: 100%;
-  text-align: center;
-}
-
-/* Number text (1/3 etc) */
-.numbertext {
-  color: #f2f2f2;
-  font-size: 12px;
-  padding: 8px 12px;
-  position: absolute;
-  top: 0;
-}
-
-/* The dots/bullets/indicators */
-.dot {
-  cursor: pointer;
-  height: 15px;
-  width: 15px;
-  margin: 0 2px;
-  background-color: #bbb;
-  border-radius: 50%;
-  display: inline-block;
-  transition: background-color 0.6s ease;
-}
-
-.active, .dot:hover {
-  background-color: #717171;
-}
-
-/* Fading animation */
-.fade {
-  -webkit-animation-name: fade;
-  -webkit-animation-duration: 1.5s;
-  animation-name: fade;
-  animation-duration: 1.5s;
-}
-
-@-webkit-keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-@keyframes fade {
-  from {opacity: .4} 
-  to {opacity: 1}
-}
-
-/* On smaller screens, decrease text size */
-@media only screen and (max-width: 300px) {
-  .prev, .next,.text {font-size: 11px}
-}
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
 
-	<!--This makes the selected object move to the left-->
-	.turn_around{
-		float:left;
-	}
-	<!--This makes the selected object move to the right-->
-	.turn_back_around{
-		float:right;
-	}
-	<!--This changes the background-color of any and all items with this tag-->
-	.black_background_color{
-		background:#000000;
-	}
-	<!--This changes the background-color of any and all items with this tag-->
-	.gray_background_color{
-		background:#828891;
-	}
-	
-	.text_color_white{
-		color:white;
-	}
-	
-	.top_cushion{
-		padding-top: 10px;
-	}
-	
-	.big_bottom_cushion{
-		padding-bottom:100px;
-	}
-	
-	.button {
-	   border: none;
-	   text-align: center;
-	   font-size: 10px;
-	   padding: 10px;
-	   transition: all 0.5s;
-	   cursor: pointer;
-	   margin: 5px;
-	}
-	 
-	.button span {
-	   cursor: pointer;
-	   display: inline-block;
-	   position: relative;
-	   transition: 0.5s;
-	}
-	 
-	.button span:after {
-	   content: '»';
-	   position: absolute;
-	   opacity: 0;
-	   top: 0;
-	   right: -2px;
-	   transition: 0.5s;
-	}
-	 
-	.button:hover span {
-	   padding-right: 10px;
-	}
-	 
-	.button:hover span:after {
-	   opacity: 1;
-	   right: 0;
-	}
-	
-	.round_button {
-		border-radius: 24px;
-	}
-	
-	.button_gray {
-		color:#828282;
-	}
-</style>
-  
-  <title>Home</title>
-  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" type="text/css" href="kstyle.css">
-</head>
+	<head>
 
-  <!--THIS IS A DIVID3R! [also a comment]-->
-  
-<body>
-  <div class = "container-fluid">
-    <div class="header">
-      <p>Mindcraft Robotics<img class="h1-logo" href="logo" src="home-pic\logo.png"></p>
-    </div>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <div class="navbar" align="center">
-      <button class="button round_button button_gray"><a href="home.html">Home</a></button>
-      <button class="button round_button button_gray"><a href="about.html">About Us</a></button>
-      <button class="button round_button button_gray"><a href="competitions.html">Competitions</a></button>
-      <button class="button round_button button_gray"><a href="media.html">Media</a></button>
-      <button class="button round_button button_gray"><a href="blog.html">Blog</a></button>
-      <button class="button round_button button_gray"><a href="contacts.html">Contact Us</a></button>
-      <button class="button round_button button_gray"><a href="sponsors.html">Sponsors</a></button>
-    </div>
+	<style>
+		  * {box-sizing: border-box}
+		body {font-family: Verdana, sans-serif; margin:0}
+		.mySlides {display: none}
+		img {vertical-align: middle;}
 
-    <!--Slideshow-Thingy-->
-    <div class="slideshow-container">
-      <div class="mySlides fade">
-        <div class="numbertext">1 / 9</div>
-        <img src="home-pic/1.JPG" style="width:100%">
-        <div class="text">Caption Text</div>
-      </div>
+		/* Slideshow container */
+		.slideshow-container {
+		  max-width: 1000px;
+		  position: relative;
+		  margin: auto;
+		}
 
-      <div class="mySlides fade">
-        <div class="numbertext">2 / 9</div>
-        <img src="home-pic/2.JPG" style="width:100%">
-        <div class="text">Caption Text</div>
-      </div>
+		/* Next & previous buttons */
+		.prev, .next {
+		  cursor: pointer;
+		  position: absolute;
+		  top: 50%;
+		  width: auto;
+		  padding: 16px;
+		  margin-top: -22px;
+		  color: white;
+		  font-weight: bold;
+		  font-size: 18px;
+		  transition: 0.6s ease;
+		  border-radius: 0 3px 3px 0;
+		}
 
-      <div class="mySlides fade">
-        <div class="numbertext">3 / 9</div>
-        <img src="home-pic/3.JPG" style="width:100%">
-        <div class="text">Caption Text</div>
-      </div>
+		/* Position the "next button" to the right */
+		.next {
+		  right: 0;
+		  border-radius: 3px 0 0 3px;
+		}
 
-      <div class="mySlides fade">
-        <div class="numbertext">4 / 9</div>
-        <img src="home-pic/4.JPG" style="width:100%">
-        <div class="text">Caption Text</div>
-      </div>
+		/* On hover, add a black background color with a little bit see-through */
+		.prev:hover, .next:hover {
+		  background-color: rgba(0,0,0,0.8);
+		}
 
-      <div class="mySlides fade">
-        <div class="numbertext">5 / 9</div>
-        <img src="home-pic/5.JPG" style="width:100%">
-        <div class="text">Caption Text</div>
-      </div>
+		/* Caption text */
+		.text {
+		  color: #f2f2f2;
+		  font-size: 15px;
+		  padding: 8px 12px;
+		  position: absolute;
+		  bottom: 8px;
+		  width: 100%;
+		  text-align: center;
+		}
 
-      <div class="mySlides fade">
-        <div class="numbertext">6 / 9</div>
-        <img src="home-pic/6.JPG" style="width:100%">
-        <div class="text">Caption Text</div>
-      </div>
+		/* Number text (1/3 etc) */
+		.numbertext {
+		  color: #f2f2f2;
+		  font-size: 12px;
+		  padding: 8px 12px;
+		  position: absolute;
+		  top: 0;
+		}
 
-      <div class="mySlides fade">
-        <div class="numbertext">7 / 9</div>
-        <img src="home-pic/7.JPG" style="width:100%">
-        <div class="text">Caption Text</div>
-      </div>
+		/* The dots/bullets/indicators */
+		.dot {
+		  cursor: pointer;
+		  height: 15px;
+		  width: 15px;
+		  margin: 0 2px;
+		  background-color: #bbb;
+		  border-radius: 50%;
+		  display: inline-block;
+		  transition: background-color 0.6s ease;
+		}
 
-      <div class="mySlides fade">
-        <div class="numbertext">8 / 9</div>
-        <img src="home-pic/8.JPG" style="width:100%">
-        <div class="text">Caption Text</div>
-      </div>
+		.active, .dot:hover {
+		  background-color: #717171;
+		}
 
-      <div class="mySlides fade">
-        <div class="numbertext">9 / 9</div>
-        <img src="home-pic/9.JPG" style="width:100%">
-        <div class="text">Caption Text</div>
-      </div>
+		/* Fading animation */
+		.fade {
+		  -webkit-animation-name: fade;
+		  -webkit-animation-duration: 1.5s;
+		  animation-name: fade;
+		  animation-duration: 1.5s;
+		}
 
-      <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-      <a class="next" onclick="plusSlides(1)">&#10095;</a>
+		@-webkit-keyframes fade {
+		  from {opacity: .4} 
+		  to {opacity: 1}
+		}
 
-      </div>
-      <br>
+		@keyframes fade {
+		  from {opacity: .4} 
+		  to {opacity: 1}
+		}
 
-      <div style="text-align:center">
-        <span class="dot" onclick="currentSlide(1)"></span>
-        <span class="dot" onclick="currentSlide(2)"></span>
-        <span class="dot" onclick="currentSlide(3)"></span>
-        <span class="dot" onclick="currentSlide(4)"></span>
-        <span class="dot" onclick="currentSlide(5)"></span>
-        <span class="dot" onclick="currentSlide(6)"></span>
-        <span class="dot" onclick="currentSlide(7)"></span>
-        <span class="dot" onclick="currentSlide(8)"></span>
-        <span class="dot" onclick="currentSlide(9)"></span>
-      </div>
-    
-    <!-- OLD SLIDESHOW
-    <div class="slideshow" >
-      <img class="slideshow" src="1.jpg" width="300px">
-      <img hidden class="slideshow" src="home-pic/2.JPG" width="300px">
-      <img hidden class="slideshow" src="home-pic/3.JPG" width="300px">
-      <img hidden class="slideshow" src="home-pic/4.JPG" width="300px">
-      <img hidden class="slideshow" src="home-pic/5.JPG" width="300px">
-      <img hidden class="slideshow" src="home-pic/6.JPG" width="300px">
-      <img hidden class="slideshow" src="home-pic/7.JPG" width="300px">
-      <img hidden class="slideshow" src="home-pic/8.JPG" width="300px">
-      <img hidden class="slideshow" src="home-pic/9.JPG" width="300px">
+		/* On smaller screens, decrease text size */
+		@media only screen and (max-width: 300px) {
+		  .prev, .next,.text {font-size: 11px}
+		}
 
-      <button class="slideButton" onclick="myShow.previous()">></button>
-      <button class="slideButton" onclick="myShow.next()"><</button>
-    </div>
-    -->
 
-    <div>
-      <h1>WELCOME</h1>
-        <p> Team 3495, also known as Mindcraft Robotics, is a high school FRC team located at Edison High School in Fresno, California.  </p>
-    </div>
+		<!--This makes the selected object move to the left-->
+		.turn_around{
+			float:left;
+		}
+		<!--This makes the selected object move to the right-->
+		.turn_back_around{
+			float:right;
+		}
+		<!--This changes the background-color of any and all items with this tag-->
+		.black_background_color{
+			background:#000000;
+		}
+		<!--This changes the background-color of any and all items with this tag-->
+		.gray_background_color{
+			background:#828891;
+		}
 
-    <div>
-      <h2>TITLE</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum nulla ut accumsan cursus.
-          Integer vulputate blandit leo vel interdum. Nam tempus maximus egestas. Nullam tincidunt enim libero, 
-          ut elementum nisl cursus nec. Suspendisse potenti. Nullam ultrices blandit dapibus. Ut mi orci, 
-          porttitor ac suscipit ac, hendrerit ut mauris. Donec aliquet quis augue vitae mattis. Aliquam imperdiet 
-          lectus ac lorem pulvinar, vel efficitur nibh vestibulum. Suspendisse dictum, magna sit amet elementum 
-          euismod, urna felis rutrum sapien, eleifend pretium justo tortor fringilla sem. Morbi facilisis leo 
-          vitae fringilla mollis. Morbi mattis arcu non enim ullamcorper, at pretium orci volutpat. Praesent eu 
-          nisi id ex hendrerit accumsan vel in leo.
+		.text_color_white{
+			color:white;
+		}
 
-          Duis efficitur, neque non dignissim pellentesque, libero lacus consequat neque, eget consequat nulla 
-          dolor et quam. Ut ultricies lacinia libero, non fermentum justo rhoncus vel. Etiam dignissim, sapien 
-          cursus feugiat facilisis, mauris eros mollis ipsum, a fringilla diam enim vel risus. In id rutrum 
-          metus, tincidunt mollis sapien. Maecenas bibendum rhoncus mi suscipit iaculis. Vivamus nec purus in 
-          dolor interdum consequat. Vivamus condimentum leo nulla, eu finibus mi facilisis non. Morbi 
-          consectetur pharetra dui, nec commodo nisi pretium eget. Ut porta orci sit amet tellus aliquam, 
-          vitae gravida erat rutrum. Integer eget magna porttitor ligula aliquet cursus.</p>
-    </div>
+		.top_cushion{
+			padding-top: 10px;
+		}
 
-    <div>
-      <h2>TITLE</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum nulla ut accumsan cursus.
-          Integer vulputate blandit leo vel interdum. Nam tempus maximus egestas. Nullam tincidunt enim libero, 
-          ut elementum nisl cursus nec. Suspendisse potenti. Nullam ultrices blandit dapibus. Ut mi orci, 
-          porttitor ac suscipit ac, hendrerit ut mauris. Donec aliquet quis augue vitae mattis. Aliquam imperdiet 
-          lectus ac lorem pulvinar, vel efficitur nibh vestibulum. Suspendisse dictum, magna sit amet elementum 
-          euismod, urna felis rutrum sapien, eleifend pretium justo tortor fringilla sem. Morbi facilisis leo 
-          vitae fringilla mollis. Morbi mattis arcu non enim ullamcorper, at pretium orci volutpat. Praesent eu 
-          nisi id ex hendrerit accumsan vel in leo.
+		.big_bottom_cushion{
+			padding-bottom:100px;
+		}
 
-          Duis efficitur, neque non dignissim pellentesque, libero lacus consequat neque, eget consequat nulla 
-          dolor et quam. Ut ultricies lacinia libero, non fermentum justo rhoncus vel. Etiam dignissim, sapien 
-          cursus feugiat facilisis, mauris eros mollis ipsum, a fringilla diam enim vel risus. In id rutrum 
-          metus, tincidunt mollis sapien. Maecenas bibendum rhoncus mi suscipit iaculis. Vivamus nec purus in 
-          dolor interdum consequat. Vivamus condimentum leo nulla, eu finibus mi facilisis non. Morbi 
-          consectetur pharetra dui, nec commodo nisi pretium eget. Ut porta orci sit amet tellus aliquam, 
-          vitae gravida erat rutrum. Integer eget magna porttitor ligula aliquet cursus.</p>
-    </div>
+		.button {
+		   border: none;
+		   text-align: center;
+		   font-size: 10px;
+		   padding: 10px;
+		   transition: all 0.5s;
+		   cursor: pointer;
+		   margin: 5px;
+		}
 
-    <div>
-      <h2>TITLE</h2>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum nulla ut accumsan cursus.
-          Integer vulputate blandit leo vel interdum. Nam tempus maximus egestas. Nullam tincidunt enim libero, 
-          ut elementum nisl cursus nec. Suspendisse potenti. Nullam ultrices blandit dapibus. Ut mi orci, 
-          porttitor ac suscipit ac, hendrerit ut mauris. Donec aliquet quis augue vitae mattis. Aliquam imperdiet 
-          lectus ac lorem pulvinar, vel efficitur nibh vestibulum. Suspendisse dictum, magna sit amet elementum 
-          euismod, urna felis rutrum sapien, eleifend pretium justo tortor fringilla sem. Morbi facilisis leo 
-          vitae fringilla mollis. Morbi mattis arcu non enim ullamcorper, at pretium orci volutpat. Praesent eu 
-          nisi id ex hendrerit accumsan vel in leo.
+		.button span {
+		   cursor: pointer;
+		   display: inline-block;
+		   position: relative;
+		   transition: 0.5s;
+		}
 
-          Duis efficitur, neque non dignissim pellentesque, libero lacus consequat neque, eget consequat nulla 
-          dolor et quam. Ut ultricies lacinia libero, non fermentum justo rhoncus vel. Etiam dignissim, sapien 
-          cursus feugiat facilisis, mauris eros mollis ipsum, a fringilla diam enim vel risus. In id rutrum 
-          metus, tincidunt mollis sapien. Maecenas bibendum rhoncus mi suscipit iaculis. Vivamus nec purus in 
-          dolor interdum consequat. Vivamus condimentum leo nulla, eu finibus mi facilisis non. Morbi 
-          consectetur pharetra dui, nec commodo nisi pretium eget. Ut porta orci sit amet tellus aliquam, 
-          vitae gravida erat rutrum. Integer eget magna porttitor ligula aliquet cursus.</p>
-    </div>
+		.button span:after {
+		   content: '»';
+		   position: absolute;
+		   opacity: 0;
+		   top: 0;
+		   right: -2px;
+		   transition: 0.5s;
+		}
 
-    <div>
-      <!--
-      <h6>FIND US</h6>
-      <h5>
-        <a target="_blank" href="https://www.facebook.com/Edison3495/"><img class="bottom-mq" src="home-pic\fb.png" alt="fb"></a>
-        <a target="_blank" href="https://twitter.com/mindcraft3495?lang=en"><img class="bottom-mq" src="twt.png" alt="twit"></a>
-        <a target="_blank" href="https://www.instagram.com/team3495/"><img class="bottom-mq" src="inst.png" alt="insta"></a>
-        <a target="_blank" href="https://www.gofundme.com/edison3495"><img class="bottom-mq" src="gfm.png" alt="gfm"></a>
-        <a target="_blank" href="https://frc-events.firstinspires.org/2018/team/3495"><img class="frc.png" alt="frc"></a>
-      </h5>
-      -->
-    </div>
-  </div>
-  <nav class="navbar navbar-inverse navbar-fixed-bottom">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#end">FIND US HERE:</a>
-    </div>
-    <ul class="nav navbar-nav">
-      <a target="_blank" href="https://www.facebook.com/Edison3495/"><img class="bottom-mq" src="home-pic/fb.png" alt="fb"></a>
-      <a target="_blank" href="https://twitter.com/mindcraft3495?lang=en"><img class="bottom-mq" src="home-pic/twt.png" alt="twit"></a>
-      <a target="_blank" href="https://www.instagram.com/team3495/"><img class="bottom-mq" src="home-pic/inst.png" alt="insta"></a>
-      <a target="_blank" href="https://www.gofundme.com/edison3495"><img class="bottom-mq" src="home-pic/gfm.png" alt="gfm"></a>
-      <a target="_blank" href="https://frc-events.firstinspires.org/2018/team/3495"><img class="home-pic/frc.png" alt="frc"></a>
-    </ul>
-  </nav>
-  
-  <script>
-  var slideIndex = 1;
-  showSlides(slideIndex);
+		.button:hover span {
+		   padding-right: 10px;
+		}
 
-  function plusSlides(n) {
-    showSlides(slideIndex += n);
-  }
+		.button:hover span:after {
+		   opacity: 1;
+		   right: 0;
+		}
 
-  function currentSlide(n) {
-    showSlides(slideIndex = n);
-  }
+		.round_button {
+			border-radius: 24px;
+		}
 
-  function showSlides(n) {
-    var i;
-    var slides = document.getElementsByClassName("mySlides");
-    var dots = document.getElementsByClassName("dot");
-    if (n > slides.length) {slideIndex = 1}    
-    if (n < 1) {slideIndex = slides.length}
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";  
-    }
-    for (i = 0; i < dots.length; i++) {
-        dots[i].className = dots[i].className.replace(" active", "");
-    }
-    slides[slideIndex-1].style.display = "block";  
-    dots[slideIndex-1].className += " active";
-  }
-  </script>
-</body>
+		.button_gray {
+			color:#828282;
+		}
+	</style>
+
+	  <title>Home</title>
+	  <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+	  <link rel="stylesheet" type="text/css" href="kstyle.css">
+	</head>
+
+	  <!--THIS IS A DIVID3R! [also a comment]-->
+
+	<body>
+		<div class = "container-fluid">
+			<div class="header">
+				<p>Mindcraft Robotics<img class="h1-logo" href="logo" src="home-pic\logo.png"></p>
+			</div>
+
+			<div class="navbar" align="center">
+				<button class="button round_button button_gray"><a href="home.html">Home</a></button>
+				<button class="button round_button button_gray"><a href="about.html">About Us</a></button>
+				<button class="button round_button button_gray"><a href="competitions.html">Competitions</a></button>
+				<button class="button round_button button_gray"><a href="media.html">Media</a></button>
+				<button class="button round_button button_gray"><a href="blog.html">Blog</a></button>
+				<button class="button round_button button_gray"><a href="contacts.html">Contact Us</a></button>
+				<button class="button round_button button_gray"><a href="sponsors.html">Sponsors</a></button>
+			</div>
+
+			<!--Slideshow-Thingy-->
+			
+			<div class="w3-content w3-display-container">
+				<img class="mySlides" src="home-pic/1.JPG">
+				<img class="mySlides" src="home-pic/2.JPG">
+				<img class="mySlides" src="home-pic/3.JPG">
+				<img class="mySlides" src="home-pic/4.JPG">
+				<img class="mySlides" src="home-pic/5.JPG">
+				<img class="mySlides" src="home-pic/6.JPG">
+				<img class="mySlides" src="home-pic/7.JPG">
+				<img class="mySlides" src="home-pic/8.JPG">
+				<img class="mySlides" src="home-pic/9.JPG">
+				<div class="w3-center w3-display-bottommiddle" style="width:100%">
+					<div class="w3-left" onclick="plusDivs(-1)">&#10094;</div>
+					<div class="w3-right" onclick="plusDivs(1)">&#10095;</div>
+					<span class="w3-badge demo w3-border" onclick="currentDiv(1)"></span>
+					<span class="w3-badge demo w3-border" onclick="currentDiv(2)"></span>
+					<span class="w3-badge demo w3-border" onclick="currentDiv(3)"></span>
+					<span class="w3-badge demo w3-border" onclick="currentDiv(4)"></span>
+					<span class="w3-badge demo w3-border" onclick="currentDiv(5)"></span>
+					<span class="w3-badge demo w3-border" onclick="currentDiv(6)"></span>
+					<span class="w3-badge demo w3-border" onclick="currentDiv(7)"></span>
+					<span class="w3-badge demo w3-border" onclick="currentDiv(8)"></span>
+					<span class="w3-badge demo w3-border" onclick="currentDiv(9)"></span>
+				</div>
+			</div>
+			
+			<!-- Keeping this slideshow in case of emergency
+			<div class="slideshow-container">
+				<div class="mySlides fade">
+				<div class="numbertext">1 / 9</div>
+				<img src="home-pic/1.JPG" style="width:100%">
+				<div class="text">Caption Text</div>
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">2 / 9</div>
+				<img src="home-pic/2.JPG" style="width:100%">
+				<div class="text">Caption Text</div>
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">3 / 9</div>
+				<img src="home-pic/3.JPG" style="width:100%">
+				<div class="text">Caption Text</div>
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">4 / 9</div>
+				<img src="home-pic/4.JPG" style="width:100%">
+				<div class="text">Caption Text</div>
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">5 / 9</div>
+				<img src="home-pic/5.JPG" style="width:100%">
+				<div class="text">Caption Text</div>
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">6 / 9</div>
+				<img src="home-pic/6.JPG" style="width:100%">
+				<div class="text">Caption Text</div>
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">7 / 9</div>
+				<img src="home-pic/7.JPG" style="width:100%">
+				<div class="text">Caption Text</div>
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">8 / 9</div>
+				<img src="home-pic/8.JPG" style="width:100%">
+				<div class="text">Caption Text</div>
+			</div>
+
+			<div class="mySlides fade">
+				<div class="numbertext">9 / 9</div>
+				<img src="home-pic/9.JPG" style="width:100%">
+				<div class="text">Caption Text</div>
+			</div>
+
+			<a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+			<a class="next" onclick="plusSlides(1)">&#10095;</a>
+
+			</div>
+			<br>
+
+			<div style="text-align:center">
+			<span class="dot" onclick="currentSlide(1)"></span>
+			<span class="dot" onclick="currentSlide(2)"></span>
+			<span class="dot" onclick="currentSlide(3)"></span>
+			<span class="dot" onclick="currentSlide(4)"></span>
+			<span class="dot" onclick="currentSlide(5)"></span>
+			<span class="dot" onclick="currentSlide(6)"></span>
+			<span class="dot" onclick="currentSlide(7)"></span>
+			<span class="dot" onclick="currentSlide(8)"></span>
+			<span class="dot" onclick="currentSlide(9)"></span>
+			</div>
+			-->
+
+			<!-- OLD SLIDESHOW
+			<div class="slideshow" >
+				<img class="slideshow" src="1.jpg" width="300px">
+				<img hidden class="slideshow" src="home-pic/2.JPG" width="300px">
+				<img hidden class="slideshow" src="home-pic/3.JPG" width="300px">
+				<img hidden class="slideshow" src="home-pic/4.JPG" width="300px">
+				<img hidden class="slideshow" src="home-pic/5.JPG" width="300px">
+				<img hidden class="slideshow" src="home-pic/6.JPG" width="300px">
+				<img hidden class="slideshow" src="home-pic/7.JPG" width="300px">
+				<img hidden class="slideshow" src="home-pic/8.JPG" width="300px">
+				<img hidden class="slideshow" src="home-pic/9.JPG" width="300px">
+
+				<button class="slideButton" onclick="myShow.previous()">></button>
+				<button class="slideButton" onclick="myShow.next()"><</button>
+			</div>
+			-->
+
+			<div>
+				<h1>WELCOME</h1>
+				<p> Team 3495, also known as Mindcraft Robotics, is a high school FRC team located at Edison High School in Fresno, California.  </p>
+			</div>
+
+			<div>
+				<h2>TITLE</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum nulla ut accumsan cursus.
+				  Integer vulputate blandit leo vel interdum. Nam tempus maximus egestas. Nullam tincidunt enim libero, 
+				  ut elementum nisl cursus nec. Suspendisse potenti. Nullam ultrices blandit dapibus. Ut mi orci, 
+				  porttitor ac suscipit ac, hendrerit ut mauris. Donec aliquet quis augue vitae mattis. Aliquam imperdiet 
+				  lectus ac lorem pulvinar, vel efficitur nibh vestibulum. Suspendisse dictum, magna sit amet elementum 
+				  euismod, urna felis rutrum sapien, eleifend pretium justo tortor fringilla sem. Morbi facilisis leo 
+				  vitae fringilla mollis. Morbi mattis arcu non enim ullamcorper, at pretium orci volutpat. Praesent eu 
+				  nisi id ex hendrerit accumsan vel in leo.
+
+				  Duis efficitur, neque non dignissim pellentesque, libero lacus consequat neque, eget consequat nulla 
+				  dolor et quam. Ut ultricies lacinia libero, non fermentum justo rhoncus vel. Etiam dignissim, sapien 
+				  cursus feugiat facilisis, mauris eros mollis ipsum, a fringilla diam enim vel risus. In id rutrum 
+				  metus, tincidunt mollis sapien. Maecenas bibendum rhoncus mi suscipit iaculis. Vivamus nec purus in 
+				  dolor interdum consequat. Vivamus condimentum leo nulla, eu finibus mi facilisis non. Morbi 
+				  consectetur pharetra dui, nec commodo nisi pretium eget. Ut porta orci sit amet tellus aliquam, 
+				  vitae gravida erat rutrum. Integer eget magna porttitor ligula aliquet cursus.</p>
+			</div>
+
+				<div>
+				<h2>TITLE</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum nulla ut accumsan cursus.
+				  Integer vulputate blandit leo vel interdum. Nam tempus maximus egestas. Nullam tincidunt enim libero, 
+				  ut elementum nisl cursus nec. Suspendisse potenti. Nullam ultrices blandit dapibus. Ut mi orci, 
+				  porttitor ac suscipit ac, hendrerit ut mauris. Donec aliquet quis augue vitae mattis. Aliquam imperdiet 
+				  lectus ac lorem pulvinar, vel efficitur nibh vestibulum. Suspendisse dictum, magna sit amet elementum 
+				  euismod, urna felis rutrum sapien, eleifend pretium justo tortor fringilla sem. Morbi facilisis leo 
+				  vitae fringilla mollis. Morbi mattis arcu non enim ullamcorper, at pretium orci volutpat. Praesent eu 
+				  nisi id ex hendrerit accumsan vel in leo.
+
+				  Duis efficitur, neque non dignissim pellentesque, libero lacus consequat neque, eget consequat nulla 
+				  dolor et quam. Ut ultricies lacinia libero, non fermentum justo rhoncus vel. Etiam dignissim, sapien 
+				  cursus feugiat facilisis, mauris eros mollis ipsum, a fringilla diam enim vel risus. In id rutrum 
+				  metus, tincidunt mollis sapien. Maecenas bibendum rhoncus mi suscipit iaculis. Vivamus nec purus in 
+				  dolor interdum consequat. Vivamus condimentum leo nulla, eu finibus mi facilisis non. Morbi 
+				  consectetur pharetra dui, nec commodo nisi pretium eget. Ut porta orci sit amet tellus aliquam, 
+				  vitae gravida erat rutrum. Integer eget magna porttitor ligula aliquet cursus.</p>
+			</div>
+
+			<div>
+				<h2>TITLE</h2>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam vestibulum nulla ut accumsan cursus.
+				  Integer vulputate blandit leo vel interdum. Nam tempus maximus egestas. Nullam tincidunt enim libero, 
+				  ut elementum nisl cursus nec. Suspendisse potenti. Nullam ultrices blandit dapibus. Ut mi orci, 
+				  porttitor ac suscipit ac, hendrerit ut mauris. Donec aliquet quis augue vitae mattis. Aliquam imperdiet 
+				  lectus ac lorem pulvinar, vel efficitur nibh vestibulum. Suspendisse dictum, magna sit amet elementum 
+				  euismod, urna felis rutrum sapien, eleifend pretium justo tortor fringilla sem. Morbi facilisis leo 
+				  vitae fringilla mollis. Morbi mattis arcu non enim ullamcorper, at pretium orci volutpat. Praesent eu 
+				  nisi id ex hendrerit accumsan vel in leo.
+
+				  Duis efficitur, neque non dignissim pellentesque, libero lacus consequat neque, eget consequat nulla 
+				  dolor et quam. Ut ultricies lacinia libero, non fermentum justo rhoncus vel. Etiam dignissim, sapien 
+				  cursus feugiat facilisis, mauris eros mollis ipsum, a fringilla diam enim vel risus. In id rutrum 
+				  metus, tincidunt mollis sapien. Maecenas bibendum rhoncus mi suscipit iaculis. Vivamus nec purus in 
+				  dolor interdum consequat. Vivamus condimentum leo nulla, eu finibus mi facilisis non. Morbi 
+				  consectetur pharetra dui, nec commodo nisi pretium eget. Ut porta orci sit amet tellus aliquam, 
+				  vitae gravida erat rutrum. Integer eget magna porttitor ligula aliquet cursus.</p>
+			</div>
+
+			<!--
+			<div>
+				<h6>FIND US</h6>
+				<h5>
+				<a target="_blank" href="https://www.facebook.com/Edison3495/"><img class="bottom-mq" src="home-pic\fb.png" alt="fb"></a>
+				<a target="_blank" href="https://twitter.com/mindcraft3495?lang=en"><img class="bottom-mq" src="twt.png" alt="twit"></a>
+				<a target="_blank" href="https://www.instagram.com/team3495/"><img class="bottom-mq" src="inst.png" alt="insta"></a>
+				<a target="_blank" href="https://www.gofundme.com/edison3495"><img class="bottom-mq" src="gfm.png" alt="gfm"></a>
+				<a target="_blank" href="https://frc-events.firstinspires.org/2018/team/3495"><img class="frc.png" alt="frc"></a>
+				</h5>
+			</div>-->
+
+		</div>
+		
+		<nav class="navbar navbar-inverse navbar-fixed-bottom">
+			<div class="navbar-header">
+				<a class="navbar-brand" href="#end">FIND US HERE:</a>
+			</div>
+			<ul class="nav navbar-nav">
+				<a target="_blank" href="https://www.facebook.com/Edison3495/"><img class="bottom-mq" src="home-pic/fb.png" alt="fb"></a>
+				<a target="_blank" href="https://twitter.com/mindcraft3495?lang=en"><img class="bottom-mq" src="home-pic/twt.png" alt="twit"></a>
+				<a target="_blank" href="https://www.instagram.com/team3495/"><img class="bottom-mq" src="home-pic/inst.png" alt="insta"></a>
+				<a target="_blank" href="https://www.gofundme.com/edison3495"><img class="bottom-mq" src="home-pic/gfm.png" alt="gfm"></a>
+				<a target="_blank" href="https://frc-events.firstinspires.org/2018/team/3495"><img class="home-pic/frc.png" alt="frc"></a>
+			</ul>
+		</nav>
+
+		<script>
+			var slideIndex = 1;
+			showDivs(slideIndex);
+
+			function plusDivs(n) {
+			    showDivs(slideIndex += n);
+			}
+
+			function showDivs(n) {
+			    var i;
+			    var x = document.getElementsByClassName("mySlides");
+			    if (n > x.length) {slideIndex = 1} 
+			    if (n < 1) {slideIndex = x.length} ;
+			    for (i = 0; i < x.length; i++) {
+				x[i].style.display = "none"; 
+			    }
+			    x[slideIndex-1].style.display = "block"; 
+			}
+		</script>
+	</body>
 </html>
