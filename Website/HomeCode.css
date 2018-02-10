@@ -1,0 +1,208 @@
+* {box-sizing: border-box}
+body {font-family: Verdana, sans-serif; margin:0}
+.mySlides {display: none}
+img {vertical-align: middle;}
+
+/* Slideshow container */
+.slideshow-container {
+max-width: 1000px;
+position: relative;
+margin: auto;
+}
+
+/* Next & previous buttons */
+.prev, .next {
+cursor: pointer;
+position: absolute;
+top: 50%;
+width: auto;
+padding: 16px;
+margin-top: -22px;
+color: white;
+font-weight: bold;
+font-size: 18px;
+transition: 0.6s ease;
+border-radius: 0 3px 3px 0;
+}
+
+/* Position the "next button" to the right */
+.next {
+right: 0;
+border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover, .next:hover {
+background-color: rgba(0,0,0,0.8);
+}
+
+/* Caption text */
+.text {
+color: #f2f2f2;
+font-size: 15px;
+padding: 8px 12px;
+position: absolute;
+bottom: 8px;
+width: 100%;
+text-align: center;
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+color: #f2f2f2;
+font-size: 12px;
+padding: 8px 12px;
+position: absolute;
+top: 0;
+}
+
+/* The dots/bullets/indicators */
+.dot {
+cursor: pointer;
+height: 15px;
+width: 15px;
+margin: 0 2px;
+background-color: #bbb;
+border-radius: 50%;
+display: inline-block;
+transition: background-color 0.6s ease;
+}
+
+.active, .dot:hover {
+background-color: #717171;
+}
+
+/* Fading animation */
+.fade {
+-webkit-animation-name: fade;
+-webkit-animation-duration: 1.5s;
+animation-name: fade;
+animation-duration: 1.5s;
+}
+
+@-webkit-keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+@keyframes fade {
+from {opacity: .4} 
+to {opacity: 1}
+}
+
+/* On smaller screens, decrease text size */
+@media only screen and (max-width: 300px) {
+.prev, .next,.text {font-size: 11px}
+}
+
+
+<!--This makes the selected object move to the left-->
+.turn_around{
+float:left;
+}
+<!--This makes the selected object move to the right-->
+.turn_back_around{
+float:right;
+}
+<!--This changes the background-color of any and all items with this tag-->
+.black_background_color{
+background:#000000;
+}
+<!--This changes the background-color of any and all items with this tag-->
+.gray_background_color{
+background:#828891;
+}
+
+.text_color_white{
+color:white;
+}
+
+.top_cushion{
+padding-top: 10px;
+}
+
+.big_bottom_cushion{
+padding-bottom:100px;
+}
+
+.button {
+border: none;
+text-align: center;
+font-size: 10px;
+padding: 10px;
+transition: all 0.5s;
+cursor: pointer;
+margin: 5px;
+}
+
+.button span {
+cursor: pointer;
+display: inline-block;
+position: relative;
+transition: 0.5s;
+}
+
+.button span:after {
+content: '»';
+position: absolute;
+opacity: 0;
+top: 0;
+right: -2px;
+transition: 0.5s;
+}
+
+.button:hover span {
+padding-right: 10px;
+}
+
+.button:hover span:after {
+opacity: 1;
+right: 0;
+}
+
+.round_button {
+border-radius: 12px;
+}
+
+.button_gray {
+color:#828282;
+}
+
+.imageResizing {
+width: 500px;
+}
+
+.bottom-mq {
+width: 30px;
+height: 30px;
+padding: 10px;
+}
+.h1-logo {
+width: 100px;
+height: 100px;
+position: relative;
+right: 30px;
+top: 50px;
+overflow: hidden;
+transition-duration: 0.8s;
+transition-property: transform;
+}
+.h1-logo:hover {
+width: 200px;
+height: 200px;
+position: relative;
+right: 30px;
+top: 50px;
+transform: rotate(360deg);
+-webkit-transform: rotate(360deg);
+}
+p.fauntcy {
+font-family: Lucida Sans, Unicode, Marlett Minion Web;
+font-color: white;
+}
+.header {
+background-image: url("");
+font-color: #black;
+text-shadow: 5px 10px #C1C1C1;
+font-size: 100px;
+}
