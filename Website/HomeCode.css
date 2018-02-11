@@ -97,19 +97,19 @@ img {vertical-align: middle;}
 
 
 /*This makes the selected object move to the left*/
-.turn_around{
+.turn_around {
   float:left;
 }
 /*This makes the selected object move to the right*/
-.turn_back_around{
+.turn_back_around {
   float:right;
 }
 /*This changes the background-color of any and all items with this tag-*/
-.black_background_color{
+.black_background_color {
   background:#000000;
 }
 /*This changes the background-color of any and all items with this tag*/
-.gray_background_color{
+.gray_background_color {
   background:#828891;
 }
 
@@ -118,12 +118,12 @@ img {vertical-align: middle;}
 }
 
 /*Adds some padding at the top of the selected object*/
-.top_cushion{
+.top_cushion {
   padding-top: 10px;
 }
 
 /*Self-explanitory, a big cushiopn of padding at the bottom of the selected object*/
-.big_bottom_cushion{
+.big_bottom_cushion {
   padding-bottom:100px;
 }
 
@@ -211,6 +211,6 @@ p.fauntcy {
 .back_backgroundBlack {
   background-color:#000000;
 }
-.well_backgroundGrey{
+.well_backgroundGrey {
   background-color:#8c8c8c;
 }
