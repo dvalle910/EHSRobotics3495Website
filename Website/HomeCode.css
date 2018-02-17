@@ -193,8 +193,8 @@ img {vertical-align: middle;}
   transition-property: transform;
 }
 .h1-logo:hover {
-  width: 200px;
-  height: 200px;
+  width: 100px;
+  height: 100px;
   position: relative;
   right: 30px;
   top: 50px;
