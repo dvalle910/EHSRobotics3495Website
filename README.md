@@ -50,4 +50,4 @@ Having trouble with Pages? Check out our [documentation](https://help.github.com
 
 
 
-### Welcome to Team 3495 Mindcraft's Homepage! Find our Homepage [here](https://dvalle910.github.io/EHSRobotics3495Website/Website/home.html)!
+### Welcome to Team 3495 Mindcraft's Homepage! Find our Homepage [here](https://dvalle910.github.io/MindcraftRobotics3495/Website/home.html)!
