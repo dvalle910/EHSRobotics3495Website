@@ -242,3 +242,7 @@ p.fauntcy {
   width:50px;
   height:50px;
 }
+.small_top_bottom_padding {
+  padding-top:25px;
+  padding-bottom:25px;
+}
