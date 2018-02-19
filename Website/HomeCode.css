@@ -246,3 +246,6 @@ p.fauntcy {
   padding-top:25px;
   padding-bottom:25px;
 }
+.float_right {
+  float:right;
+}
